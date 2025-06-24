@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буквоежка - Панель администратора</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Буквоежка <span>Админ-панель</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="admin.html" class="active">Карточки на модерации</a></li>
+                    <li><a href="#" id="adminLogout">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="admin-main">
+        <div class="container">
+            <h2>Карточки на модерации</h2>
+            
+            <div class="admin-cards">
+                <!-- Карточки на модерации будут загружаться здесь -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Окно модератора для отклонения карточки -->
+    <div id="rejectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Укажите причину отклонения</h3>
+            <form id="rejectForm">
+                <input type="hidden" id="rejectCardId">
+                <div class="form-group">
+                    <label for="rejectReason">Причина</label>
+                    <textarea id="rejectReason" name="rejectReason" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-warning">Отклонить</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/admin.js"></script>
+</body>
+</html>
